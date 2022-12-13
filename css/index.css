@@ -1,0 +1,35 @@
+*,*:before,*:after {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+
+    
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+.header {
+    background-color: black;
+}
+
+
+.header_wrapper {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.nav {
+
+}
+
+.nav_link { color: #fff;
+    text-transform: uppercase;
+
+}
