@@ -5,16 +5,43 @@
 
 body {
     margin: 0;
-
+    font-family: Poppins;
+    font-size: 15px;
     
 }
 
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
 .container {
     width: 1200px;
     margin: 0 auto;
 }
+.btn {
+    height: 50px;
+    min-width: 200px;
+    padding: 0 15px;
+    display: inline-flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: red;
+    transition: background-color .2s ease;
+}
+
+.btn:hover {
+    background-color: rgb(146, 3, 3);
+
+}
 .header {
-    background-color: black;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
 }
 
 
@@ -23,13 +50,106 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.header_block {
+    width: 20%;
+}
     
-}
+
 .nav {
+    display: flex;
 
 }
 
-.nav_link { color: #fff;
+.nav_link { 
+    margin-right: 35px;
+    color: #fff;
     text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+}
+.nav_link:last-child {
+    margin-right: 0;
+}
 
+.nav_link:after {
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    content: '';
+    opacity: 0;
+    transition: opacity .2c ease;
+}
+
+.nav_link.active:after {
+opacity: 1;
+}
+ .nav_link:hover:after {
+    opacity: 1;
+ }
+
+.header_lng {
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.header_lng-link {
+    margin-right: 8px;
+    color: #b7b7b7;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.header_lng-link.active {
+    color: #fff;
+}
+.header_lng-link:last-child {
+    margin-right: 0;
+}
+
+
+.intro {
+    background: url(../img/intro_bg.jpg) no-repeat;
+    block-size: cover;
+    position: relative;
+}
+
+.intro:after {
+     height: 100%;
+     width: 100%;
+     position: absolute;
+     top: 0;
+     left: 0;
+     background-color: black;
+     opacity: .2;
+     content: '';
+}
+
+
+
+.intro_contant {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.intro_block {
+
+}
+
+.intro_title {
+    max-width: 790px;
+    margin-bottom: 30px;
+    font-size: 48px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 150%;
 }
